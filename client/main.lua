@@ -409,6 +409,7 @@ function OpenBodyMenu()
     for i, v in ipairs(WAIST_TYPES) do
         table.insert(BodyWaistOptions, "+ " .. (i / 2) .. " kg")
     end
+    local TeethOptions = {"0","1","2","3","4","5","6"}
     local SkinToneOptions = {"<img src='nui://redemrp_creator/img/skin1.png' height='20'>",
                              "<img src='nui://redemrp_creator/img/skin2.png' height='20'>",
                              "<img src='nui://redemrp_creator/img/skin3.png' height='20'>",
@@ -424,6 +425,15 @@ function OpenBodyMenu()
         min = 1,
         max = 120,
         hop = 6
+    },{
+        label = "Teeth",
+        value = CreatorCache["teeth"] or 1,
+        category = "teeth",
+        desc = "Change your teeth",
+        type = "slider",
+        min = 0,
+        max = 6,
+        options = TeethOptions
     }, {
         label = "Face Width",
         value = CreatorCache["face_width"] or 0,
